@@ -1,14 +1,92 @@
 # include <iostream>
 
-using namespace std
+using namespace std;
+
+class question
+{
+	private :
+		string testy , j_test , tashrihy ;
+	public :
+		void set_testy ( string soal , string javab )
+		{
+			testy = soal ;
+			j_test = javab ;
+		}
+		void set_tashrihy ( string soal )
+		{
+			tashrihy = soal ;
+		}
+} ;
 
 class exam
 {
+	private :
+		int size ;
+		void set_size ( int temp_size )
+		{
+			size = temp_size ;
+			question quiz[size] ;
+		}
+} ;
 
+class teacher
+{
+	private :
+		
+	public :
+		
 } ;
 
 int main ()
 {
-
-return 0 ;
+	string pass ;
+	p : cout << "enter your pass : " ;
+	getline ( cin >> ws , pass ) ;
+		if ( pass != "1234" )
+		{
+			cout << "your password is wrong!" << endl ;
+			goto p ; //pass
+		}
+		else
+		{
+			string yn ;
+			q : cout << "do you want to make a quiz ??(yes/no) " ;
+			getline ( cin >> ws , yn ) ;
+			if ( yn == "no" )
+			{
+				//goto e ; //end
+			}
+			else if ( yn == "yes" )
+			{
+				int n ;
+				cout << "who many question do you want?? " ;
+				cin >> n ;
+				for ( int i=0 ; i<n ; i++ )
+				{
+					string tt ;
+					cout << "how do you want the question number " << i+1 << " be??(testy/tashrihy) " ;
+					getline ( cin >> ws , tt ) ;
+					if ( tt == "testy" )
+					{
+						string s , j ; // soal & javab
+						cout << "enter your question : " ;
+						getline ( cin >> ws , s ) ;
+						cout << "enter your answer : " ;
+						getline ( cin >> ws , j ) ;
+					}
+					else if ( tt == "tashrihy" )
+					{
+						string s ; //soal
+						cout << "enter your question : " ;
+						getline ( cin >> ws , s ) ;
+					}
+				}
+			}
+			else
+			{
+				cout << "error!" << endl ;
+				goto q ; //quiz
+			}
+		}
+    return 0 ;
 }
